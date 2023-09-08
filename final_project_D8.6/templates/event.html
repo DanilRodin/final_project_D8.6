@@ -1,0 +1,15 @@
+{% extends 'flatpages/default.html' %}
+{% load custom_filters %}
+
+{% block title %}
+Event
+{% endblock title %}
+
+{% block content %}
+
+<ol>
+<li>{{ event.post_header|censor }}</li>
+<li>{{ event.post_time_in|date:'d M Y' }}</li>
+<li>{{ event.post_text|censor }}</li>
+</ol>
+{% endblock content %}
